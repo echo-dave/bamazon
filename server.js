@@ -25,6 +25,7 @@ let options = {
 app.use(express.static('public',options));
 
 require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
  app.use(function(req,res){
 res.status(404).sendFile(__dirname + '/public/404.html');
