@@ -1,0 +1,17 @@
+.product_head {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.container {
+  max-width: 960px;
+}
+
+#products .columns:nth-child(even) {
+  background: hsl(0, 0%, 90%);
+  border-radius: 0.25rem;
+}
+
+.quantity {
+  width: 4rem;
+  margin-top: 0.25em;
+}

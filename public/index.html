@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
     <title>Bamazon</title>
-    <h1>Bamazon</h1>
-</head>
-<body>
-    
-</body>
+    <form action="/">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-narrow">
+            <h1 class="title is-1">Bamazon</h1>
+          </div>
+        </div>
+      </div>
+      <div id="products" class="container">
+        <div class="columns is-centered product_head">
+          <div class="column is-one-fifth">
+            Product:
+          </div>
+          <div class="column is-one-fifth">
+            Department:
+          </div>
+          <div class="column is-one-fifth">
+            Price:
+          </div>
+          <div class="quantity column is-narrow"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-one-fifth"></div>
+          <div class="column is-one-fifth"></div>
+          <div class="column is-one-fifth"></div>
+          <div class="column is-narrow">
+            <button class="submit button is-medium" type="submit">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script type="" src="/js/api.js"></script>
+  </body>
 </html>
