@@ -80,6 +80,19 @@ module.exports = function (app) {
     });
 
 
-
   });
+
+  app.get('/api/products/:category', function (req, res) {
+    console.log(req.params);
+
+    db.Product.findAll({
+      where: {
+        department_name: req.params.category
+      }
+    }).then(function (data) {
+      res.json(data);
+    })
+
+  })
+
 };

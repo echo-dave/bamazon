@@ -1,77 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"
-    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/formReset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Bamazon</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container header">
-      <div class="columns">
-        <div class="column is-narrow">
-          <h1 class="title is-1">Bamazon</h1>
+        <div class="columns">
+            <div class="column is-narrow">
+                <h1 class="title is-1">Bamazon</h1>
+            </div>
+            <div class="column is-narrow">
+                <div class="field">
+                    <div class="control">
+                        <select class="select is-medium" name="category" id="select-category">
+                            <option value="">Category</option>
+                            <option value="Sports Equipment">Sports</option>
+                            <option value="Art Supplies">Art</option>
+                            <option value="Electronics">Electronics</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="container box">
-      <form id="form" action="/">
-        <div id="products" class="container">
-          <div class="columns is-centered product_head">
+        <div class="columns is-centered product_head">
             <div class="column is-one-fifth">
-              Product:
+                Product:
             </div>
             <div class="column is-one-fifth">
-              Department:
+                Department:
             </div>
             <div class="column is-one-fifth">
-              Price:
+                Price:
             </div>
             <div class="quantity column is-narrow quantity"></div>
-          </div>
         </div>
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-one-fifth"></div>
-            <div class="column is-one-fifth"></div>
-            <div class="column is-one-fifth"></div>
-            <div class="column is-narrow">
-              <button class="submit button is-medium is-primary" type="submit">
-                Order Now
-              </button>
+        <form id="form" action="/">
+            <div id="products" class="container">
+
             </div>
-          </div>
-        </div>
-      </form>
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-one-fifth"></div>
+                    <div class="column is-one-fifth"></div>
+                    <div class="column is-one-fifth"></div>
+                    <div class="column is-narrow">
+                        <button id="submitOrder" class="submit button is-medium is-primary" type="submit">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!-- modal -->
     <div id="modal" class="modal">
-      <div class="modal-background"></div>
-      <div id="order" class="modal-content">
-        <h1 class="title" is-2>Order Complete</h1>
-        <div class="container">
-          <div class="columns centered">
-            <div class="column confirmationHead">Product</div>
-            <div class="column confirmationHead">quantity</div>
-            <div class="column confirmationHead">subtotals</div>
-          </div>
+        <div class="modal-background"></div>
+        <div id="order" class="modal-content">
+            <h1 class="title" is-2>Order Complete</h1>
+            <div class="container">
+                <div class="columns centered">
+                    <div class="column confirmationHead">Product</div>
+                    <div class="column confirmationHead">quantity</div>
+                    <div class="column confirmationHead">subtotals</div>
+                </div>
+            </div>
+            <div id="orderDetails" class="container"></div>
         </div>
-        <div id="orderDetails" class="container"></div>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
+        <button class="modal-close is-large" aria-label="close"></button>
     </div>
     <script src="/js/api.js"></script>
-  </body>
+    <script src="/js/category.js"></script>
+</body>
+
 </html>

@@ -4,7 +4,10 @@ $(document).ready(function () {
         console.log("-------");
         console.log(data);
         console.log("-------");
+        buildProducts(data);
+    });
 
+    function buildProducts(data) {
         //build dom for shop items
         for (let i = 0; i < data.length; i++) {
             console.log(data[i].product_name);
@@ -25,7 +28,7 @@ $(document).ready(function () {
       </div>
       `);
         }
-    });
+    }
 
     $("form").on("submit", function (event) {
         event.preventDefault();
@@ -77,3 +80,4 @@ $(document).ready(function () {
         $('input').val('0');
     });
 });
+

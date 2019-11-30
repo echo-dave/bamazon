@@ -1,6 +1,7 @@
 body {
   background-color: hsl(39, 100%, 65%);
   padding-bottom: 1.5rem;
+  min-height: 100vh;
 }
 
 .product_head {
@@ -86,6 +87,16 @@ body {
 
 .fullheight {
   height: 100vh;
+}
+
+#select-category {
+  padding: 0.06em 1em 0.06em 1.4em;
+  box-sizing: content-box;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#submitOrder {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 769px) {
