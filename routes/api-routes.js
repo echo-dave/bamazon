@@ -9,7 +9,6 @@ module.exports = function (app) {
         "product_name",
         "department_name",
         "price"
-        // ["stock_quantity", "Available"]
       ]
     }).then(function (data) {
       res.json(data);
@@ -22,7 +21,7 @@ module.exports = function (app) {
     console.log(req.body);
     let order = req.body;
 
-    //convert returned object to array to loop through and build search attributes for databse
+    //convert returned object to array to loop through and build search attributes [orderList] for databse
     //compare quantities between order and database availability
     order = Object.entries(order);
     console.log('order:');
@@ -53,7 +52,7 @@ module.exports = function (app) {
 
       //query database for stock levels of the low items for displaying on frontend. 
       //Using id to match columns id attribute
-
+      //if sotckLevels length is > 0 then we are short on stock
       if (stockLevels.length > 0) {
         db.Product.findAll({
           attributes: ['id', 'stock_quantity'],
@@ -64,6 +63,7 @@ module.exports = function (app) {
           res.json([0, data]);
         })
       } else {
+        //we have stock and need to send subtotal and total pricing to frontend
         let total = 0;
         for (let i = 0; i < order.length; i++) {
           order[i].push(data[i].price * order[i][1])
@@ -72,6 +72,8 @@ module.exports = function (app) {
         console.log('order details');
         console.log(order);
         res.send([1, order, total])
+
+        //adjust database quantities
         adjust(order, data);
       }
 

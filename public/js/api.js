@@ -35,8 +35,6 @@ $(document).ready(function () {
         let serializeArray = [];
         for (let i = 0; i < formData.length; i++)
             if (formData[i].value != 0) {
-                //console.log("formData");
-                //console.log(formData[i].value);
                 serializeArray.push(formData[i]);
             }
         console.log('array for post:');
