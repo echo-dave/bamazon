@@ -13,7 +13,7 @@ body {
   padding: 0 3em;
 }
 
-#products .columns:nth-child(even) {
+#products .columns:nth-child(odd) {
   background: hsl(0, 0%, 90%);
   border-radius: 0.25rem;
 }
