@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     $('.modal-background,.modal-close').on("click", function () {
         $('#modal').removeClass("is-active");
-        $('input').val('0');
+        $('input').val('');
     });
 });
 
