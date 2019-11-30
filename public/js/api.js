@@ -23,7 +23,7 @@ $(document).ready(function () {
       </div>
       <div class="column is-narrow quantity">
 <div class="control">
-<input type="number" min="0" class="input quantity" size="2" max-length="2" value="0" name="${data[i].product_name}"/>
+<input type="number" min="0" class="input quantity" size="2" max-length="2" value="" name="${data[i].product_name}"/>
 </div>
       </div>
       `);
@@ -37,7 +37,7 @@ $(document).ready(function () {
         //build an array of non zero quantity items
         let serializeArray = [];
         for (let i = 0; i < formData.length; i++)
-            if (formData[i].value != 0) {
+            if (formData[i].value != 0 && formData[i].value != '') {
                 serializeArray.push(formData[i]);
             }
         console.log('array for post:');
