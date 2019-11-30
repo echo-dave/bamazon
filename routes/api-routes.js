@@ -1,4 +1,5 @@
 const db = require("../database/models");
+//const sequelize = require('sequelize');
 const inventory = require('../nodejs/inventory')
 module.exports = function (app) {
   //get data for front end display
@@ -81,7 +82,7 @@ module.exports = function (app) {
 
 
   });
-
+  //category toggle
   app.get('/api/products/:category', function (req, res) {
     console.log(req.params);
 
@@ -94,5 +95,18 @@ module.exports = function (app) {
     })
 
   })
+
+  //get categories to build selector
+  app.get('/api/categories', function (req, res) {
+    db.sequelize.query("SELECT DISTINCT department_name FROM Products")
+      .then(function (categories) {
+        console.log(categories[0]);
+        res.json(categories[0]);
+
+      })
+
+  })
+
+
 
 };

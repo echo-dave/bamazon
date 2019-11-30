@@ -23,7 +23,7 @@ $(document).ready(function () {
       </div>
       <div class="column is-narrow quantity">
 <div class="control">
-<input type="number" min="0" class="input quantity" size="2" max-length="2" value="" name="${data[i].product_name}"/>
+<input type="number" min="0" class="input quantity" size="2" max-length="2" value="0" name="${data[i].product_name}"/>
 </div>
       </div>
       `);
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     $('.modal-background,.modal-close').on("click", function () {
         $('#modal').removeClass("is-active");
-        $('input').val('');
+        $('input').val('0');
     });
 });
 
