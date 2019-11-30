@@ -2,6 +2,7 @@ body {
   background-color: hsl(39, 100%, 65%);
   padding-bottom: 1.5rem;
   min-height: 100vh;
+  font-size: 1.1em;
 }
 
 .product_head {
@@ -107,7 +108,7 @@ form .container {
   .column {
     padding-top: 0.125rem;
     padding-bottom: 0.125rem;
-    padding-left: 2em;
+    padding-left: 2rem;
   }
   .columns {
     padding-top: 1em;
@@ -115,7 +116,7 @@ form .container {
     flex: auto;
   }
   .container {
-    padding: 0 1.5em;
+    padding: 0 1.5rem;
   }
   body {
     padding-left: 0.8em;
