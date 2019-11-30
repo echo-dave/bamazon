@@ -13,6 +13,10 @@ body {
   padding: 0 3em;
 }
 
+form .container {
+  padding: 0;
+}
+
 #products .columns:nth-child(odd) {
   background: hsl(0, 0%, 90%);
   border-radius: 0.25rem;
@@ -109,5 +113,12 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     flex: auto;
+  }
+  .container {
+    padding: 0 1.5em;
+  }
+  body {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
   }
 }
