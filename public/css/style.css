@@ -58,6 +58,36 @@ body {
   font-size: 1.4em;
 }
 
+.container404 .box {
+  background-color: hsl(184, 100%, 85%);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.container404 .is-primary {
+  background-color: white;
+  color: grey;
+  padding: 1.5em 1.5em 3em 1.5em;
+  margin-top: 1.5em;
+}
+
+.container404 .is-primary:hover {
+  background-color: hsl(39, 100%, 65%);
+  color: white;
+  font-weight: bold;
+}
+
+.container404 .is-primary:active {
+  background-color: hsl(39, 100%, 35%);
+  color: white;
+  font-weight: bold;
+}
+
+.fullheight {
+  height: 100vh;
+}
+
 @media only screen and (max-width: 769px) {
   .column {
     padding-top: 0.125rem;
