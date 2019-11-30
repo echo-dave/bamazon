@@ -1,6 +1,9 @@
 {
   "development": {
-    "use_env_variable":"DATABASE"
+    "use_env_variable": "DATABASE",
+    "query": {
+      "raw": true
+    }
   },
   "test": {
     "username": "root",
@@ -10,6 +13,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable":"JAWSDB_URL"
+    "use_env_variable": "JAWSDB_URL"
   }
 }

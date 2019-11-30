@@ -1,9 +1,15 @@
+body {
+  background-color: hsl(39, 100%, 65%);
+  padding-bottom: 1.5rem;
+}
+
 .product_head {
   font-weight: bold;
   font-size: 1.5em;
 }
 .container {
   max-width: 960px;
+  padding: 0 3em;
 }
 
 #products .columns:nth-child(even) {
@@ -12,6 +18,39 @@
 }
 
 .quantity {
-  width: 4rem;
+  width: 6rem;
   margin-top: 0.25em;
+}
+
+.stockCount {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.header {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background-color: hsl(184, 100%, 85%);
+  margin-bottom: 1.5em;
+}
+.header .title {
+  color: hsl(0, 0%, 42%);
+}
+.box {
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.125);
+}
+
+@media only screen and (max-width: 769px) {
+  .column {
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    padding-left: 2em;
+  }
+  .columns {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    flex: auto;
+  }
 }
