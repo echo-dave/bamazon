@@ -55,6 +55,23 @@
         </div>
       </form>
     </div>
-    <script type="" src="/js/api.js"></script>
+
+    <!-- modal -->
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div id="order" class="modal-content">
+        <h1 class="title" is-2>Order Complete</h1>
+        <div class="container">
+          <div class="columns centered">
+            <div class="column confirmationHead">Product</div>
+            <div class="column confirmationHead">quantity</div>
+            <div class="column confirmationHead">subtotals</div>
+          </div>
+        </div>
+        <div id="orderDetails" class="container"></div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="/js/api.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 const db = require("../database/models");
-
+const inventory = require('../nodejs/inventory')
 module.exports = function (app) {
   //get data for front end display
   app.get("/api/products", function (req, res) {
@@ -18,6 +18,7 @@ module.exports = function (app) {
 
   //post on order submission
   app.post("/api/submit", function (req, res) {
+    console.log('req body:');
     console.log(req.body);
     let order = req.body;
 
@@ -29,42 +30,54 @@ module.exports = function (app) {
     let orderList = [];
     for (let i = 0; i < order.length; i++) {
       orderList.push(order[i][0]);
-      console.log("order list:");
-      console.log(orderList);
     }
-
+    console.log("order query list:");
+    console.log(orderList);
     db.Product.findAll({
       where: {
         product_name: [orderList]
       }
     }).then(function (data) {
-      console.log('then order list:');
-      console.log(orderList);
-
       console.log('data');
       console.log(data);
 
       //pushing low stock items to arrray - stockLevels
       let stockLevels = [];
       for (let i = 0; i < orderList.length; i++) {
-        if (data[i].stock_quantity >= order[i][1]) {
-          // stockLevels.push(data[i].product_name + " stock good");
-        } else {
+        if (data[i].stock_quantity < order[i][1]) {
           stockLevels.push(data[i].product_name);
+        } else {
+
         }
       }
 
       //query database for stock levels of the low items for displaying on frontend. 
       //Using id to match columns id attribute
-      db.Product.findAll({
-        attributes: ['id', 'stock_quantity'],
-        where: {
-          product_name: stockLevels
-        }
-      }).then(function (data) {
-        res.json(data);
 
-      })
+      if (stockLevels.length > 0) {
+        db.Product.findAll({
+          attributes: ['id', 'stock_quantity'],
+          where: {
+            product_name: stockLevels
+          }
+        }).then(function (data) {
+          res.json([0, data]);
+        })
+      } else {
+        let total = 0;
+        for (let i = 0; i < order.length; i++) {
+          order[i].push(data[i].price * order[i][1])
+          total += order[i][2];
+        }
+        console.log('order details');
+        console.log(order);
+        res.send([1, order, total])
+        adjust(order, data);
+      }
+
     });
+
+
+
   });
 };
