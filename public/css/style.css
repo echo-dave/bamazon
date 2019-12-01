@@ -37,7 +37,7 @@ form .container {
 .header {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
-  background-color: hsl(184, 100%, 85%);
+  background-color: hsl(184, 100%, 80%);
   margin-bottom: 1.5em;
 }
 .header .title {
@@ -103,8 +103,21 @@ form .container {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
+
+#submitOrder.is-primary {
+  background-color: hsl(184, 100%, 75%);
+  color: hsl(0, 0%, 42%);
+}
+#submitOrder.is-primary:hover {
+  background-color: hsl(184, 100%, 45%);
+}
+#submitOrder.is-primary:active {
+  background-color: hsl(184, 100%, 30%);
+  color: white;
+}
+
 .department {
-  min-width:12rem;
+  min-width: 12rem;
 }
 
 @media only screen and (max-width: 769px) {
