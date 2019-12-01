@@ -1,8 +1,10 @@
-export function buildProducts(data) {
-    //build dom for shop items
-    for (let i = 0; i < data.length; i++) {
-        console.log(data[i].product_name);
-        $("#products").append(`
+function buildProducts(data) {
+  //build dom for shop items
+  $('#products').empty();
+
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i].product_name);
+    $("#products").append(`
   <div class="columns is-centered is-multiline" data-id='${data[i].id}'>
   <div class="column is-one-fifth">
   ${data[i].product_name}</div>
@@ -18,5 +20,7 @@ export function buildProducts(data) {
 </div>
   </div>
   `);
-    }
+  }
 }
+
+export { buildProducts }
