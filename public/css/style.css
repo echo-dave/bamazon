@@ -17,6 +17,20 @@ body {
 form .container {
   padding: 0;
 }
+.red {
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+
+.green {
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+.success {
+  border-bottom: 5px solid green;
+}
 
 #products .columns:nth-child(odd) {
   background: hsl(0, 0%, 90%);
@@ -119,7 +133,9 @@ form .container {
 .department {
   min-width: 12rem;
 }
-
+.is-transparent {
+  background: none;
+}
 @media only screen and (max-width: 769px) {
   .column {
     padding-top: 0.125rem;

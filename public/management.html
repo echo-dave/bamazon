@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Bamazon Management</title>
+</head>
+
+<body>
+    <div class="container header">
+        <nav class="navbar is-transparent" role="navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <h1 class="title is-1">Bamazon</h1>
+                </a>
+            </div>
+
+            <div id="BamazonMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/management" class="navbar-link">
+                            Products
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a href="/management?inventory=5" class="navbar-item">
+                                Low Inventory
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item">
+                        Mangement
+                    </a>
+
+                </div>
+        </nav>
+    </div>
+    <form action="">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-2">
+                    <div class="field">
+                        <label class="label" for="id">ID</label>
+                        <div class="control">
+                            <input name="id" type="text" class="input" placeholder="ID">
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <div class="field">
+                        <label class="label" for="price">Price</label>
+                        <div class="control">
+                            <input name="price" type="text" class="input" placeholder="Price">
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <div class="field">
+                        <label for="stock_quantity" class="label">Quantity</label>
+                        <div class="control">
+                            <input name="stock_quantity" type="text" class="input" placeholder="Quantity">
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-narrow">
+                    <div class="field">
+                        <label for="updateData" class="label">&nbsp;</label>
+                        <div class="control">
+                            <button name="updateData" type="submit" class="button is-primary">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="productContent" class="container content">
+
+
+    </div>
+
+    </div>
+    </div>
+    <script type="module" src="/js/management.js"></script>
+</body>
+
+</html>

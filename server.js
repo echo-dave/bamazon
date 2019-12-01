@@ -22,14 +22,15 @@ let options = {
 
 
 //routes
-app.use(express.static('public',options));
+app.use(express.static('public', options));
 
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/api-manage-routes.js")(app);
 
- app.use(function(req,res){
-res.status(404).sendFile(__dirname + '/public/404.html');
-});   
+app.use(function (req, res) {
+    res.status(404).sendFile(__dirname + '/public/404.html');
+});
 
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
