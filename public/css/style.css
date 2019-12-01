@@ -36,6 +36,9 @@ form .container {
   background: hsl(0, 0%, 90%);
   border-radius: 0.25rem;
 }
+#products .columns:last-child {
+  margin-bottom: 1em !important;
+}
 
 .quantity {
   width: 6rem;
@@ -60,6 +63,7 @@ form .container {
 .box {
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: rgba(255, 255, 255, 0.125);
+  padding-bottom: 1em;
 }
 
 .modal-content {
@@ -113,10 +117,10 @@ form .container {
   box-sizing: content-box;
   background-color: rgba(255, 255, 255, 0.5);
 }
-#submitOrder {
-  margin-top: 0.5em;
+/* #submitOrder {
+  margin-top: 0.8em;
   margin-bottom: 0.5em;
-}
+} */
 
 #submitOrder.is-primary {
   background-color: hsl(184, 100%, 75%);
