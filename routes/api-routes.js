@@ -67,13 +67,15 @@ module.exports = function (app) {
         //we have stock and need to send subtotal and total pricing to frontend
         let total = 0;
         for (let i = 0; i < order.length; i++) {
-          order[i].push(data[i].price * order[i][1])
-          total += order[i][2];
+          let subTotal = data[i].price * order[i][1]
+          order[i].push(subTotal.toFixed(2))
+          total += subTotal;
         }
+        //total = total.toFixed(2);
+        //set total to maintain 2 decimal places
+        res.send([1, order, total.toFixed(2)])
         console.log('order details');
-        console.log(order);
-        res.send([1, order, total])
-
+        console.log(order, total);
         //adjust database quantities
         adjust(order, data);
       }
@@ -100,7 +102,6 @@ module.exports = function (app) {
   app.get('/api/categories', function (req, res) {
     db.sequelize.query("SELECT DISTINCT department_name FROM Products")
       .then(function (categories) {
-        console.log(categories[0]);
         res.json(categories[0]);
 
       })
