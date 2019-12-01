@@ -8,10 +8,10 @@ function buildProducts(data) {
   <div class="columns is-centered is-multiline" data-id='${data[i].id}'>
   <div class="column is-one-fifth">
   ${data[i].product_name}</div>
-  <div class="column is-one-fifth">
+  <div class="column is-one-fifth department">
   ${data[i].department_name}
   </div>
-  <div class="column is-one-fifth">
+  <div class="column is-2">
   $${data[i].price}
   </div>
   <div class="column is-narrow quantity">
