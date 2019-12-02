@@ -1,5 +1,23 @@
 import { getProductsInventory } from "./managementBuild.js";
 $(document).ready(function () {
+    //listener for mobile menu
+    if ($("#mobileMenu").css('display') != 'hidden') {
+        console.log('mobile menu');
+
+        $("#mobileMenu").on('click', function (event) {
+            if ($('.navbar-menu').hasClass('is-active')) {
+                $('.navbar-menu').removeClass('is-active')
+                console.log('close menu');
+
+            } else {
+                $('.navbar-menu').addClass('is-active')
+                console.log('open menu');
+
+            }
+        })
+
+    }
+
     //load products view
     //if query url for inventory count get items with less than query value
     let url = window.location.search;
