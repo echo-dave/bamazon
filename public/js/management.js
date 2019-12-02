@@ -1,26 +1,10 @@
 import { getProductsInventory } from "./managementBuild.js";
+import { menuToggle } from "./menuToggle.js"
 $(document).ready(function () {
     //listener for mobile menu
     menuToggle();
 
-    function menuToggle() {
-        if ($("#mobileMenu").css('display') != 'hidden') {
-            console.log('mobile menu');
 
-            $("#mobileMenu").on('click', function (event) {
-                if ($('.navbar-menu').hasClass('is-active')) {
-                    $('.navbar-menu').removeClass('is-active')
-                    console.log('close menu');
-
-                } else {
-                    $('.navbar-menu').addClass('is-active')
-                    console.log('open menu');
-
-                }
-            })
-
-        }
-    }
 
     //load products view
     //if query url for inventory count get items with less than query value
@@ -90,6 +74,6 @@ $(document).ready(function () {
     })
 
 })
-
-
+//why does this export break the page?
+//export { menuToggle }
 

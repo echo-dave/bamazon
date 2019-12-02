@@ -1,4 +1,5 @@
 
+
 //build output from array of objects
 function addNewProducts(products) {
     console.log('empty buld');

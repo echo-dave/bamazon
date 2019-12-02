@@ -1,6 +1,8 @@
 import { addNewProducts } from "./newproductsbuild.js";
-
+import { menuToggle } from "./menuToggle.js";
 $(document).ready(function () {
+
+    menuToggle();
 
     $('form').on('submit', function (event) {
         event.preventDefault();
