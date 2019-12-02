@@ -160,6 +160,12 @@ form .container {
   color: white;
 }
 
+.navbar-menu {
+  background-color: none;
+  background: none;
+  box-shadow: none;
+}
+
 @media only screen and (max-width: 769px) {
   .column {
     padding-top: 0.125rem;
