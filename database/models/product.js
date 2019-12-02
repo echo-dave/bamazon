@@ -9,7 +9,7 @@ module.exports = function (sequelize, dataTypes) {
             len: [2, 30]
         },
         price: {
-            type: dataTypes.DECIMAL(8, 2),
+            type: dataTypes.DECIMAL(9, 2),
             allowNull: false
         },
         stock_quantity: {
