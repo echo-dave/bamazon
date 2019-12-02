@@ -160,12 +160,11 @@ form .container {
   color: white;
 }
 
-.navbar-menu {
-  background-color: none;
-  background: none;
-  box-shadow: none;
-}
+/* @media only screen and (max-width: 1023px){
+ .navbar-menu {
 
+ }
+} */
 @media only screen and (max-width: 769px) {
   .column {
     padding-top: 0.125rem;
@@ -189,7 +188,15 @@ form .container {
     padding-left: 0.75rem;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (min-width: 676px) and (max-width: 1023px) {
+    .navbar-menu {
+      background-color: none;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  @media only screen and (max-width: 675px) {
     .navbar-menu {
       position: absolute;
       top: 2.5em;
