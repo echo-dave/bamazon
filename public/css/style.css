@@ -141,10 +141,6 @@ form .container {
   background: none;
 }
 
-.navbar-end {
-  display: flex;
-  justify-content: flex-end;
-}
 @media only screen and (max-width: 769px) {
   .column {
     padding-top: 0.125rem;
