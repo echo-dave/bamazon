@@ -187,6 +187,11 @@ form .container {
   .container404 .column {
     padding-left: 0.75rem;
   }
+  #submitOrder {
+    position: absolute;
+    right: -0.5em;
+    top: 0;
+  }
 
   @media only screen and (min-width: 676px) and (max-width: 1023px) {
     .navbar-menu {

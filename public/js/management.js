@@ -1,21 +1,25 @@
 import { getProductsInventory } from "./managementBuild.js";
 $(document).ready(function () {
     //listener for mobile menu
-    if ($("#mobileMenu").css('display') != 'hidden') {
-        console.log('mobile menu');
+    menuToggle();
 
-        $("#mobileMenu").on('click', function (event) {
-            if ($('.navbar-menu').hasClass('is-active')) {
-                $('.navbar-menu').removeClass('is-active')
-                console.log('close menu');
+    function menuToggle() {
+        if ($("#mobileMenu").css('display') != 'hidden') {
+            console.log('mobile menu');
 
-            } else {
-                $('.navbar-menu').addClass('is-active')
-                console.log('open menu');
+            $("#mobileMenu").on('click', function (event) {
+                if ($('.navbar-menu').hasClass('is-active')) {
+                    $('.navbar-menu').removeClass('is-active')
+                    console.log('close menu');
 
-            }
-        })
+                } else {
+                    $('.navbar-menu').addClass('is-active')
+                    console.log('open menu');
 
+                }
+            })
+
+        }
     }
 
     //load products view
