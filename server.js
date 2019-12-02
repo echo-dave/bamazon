@@ -23,6 +23,7 @@ let options = {
 
 //routes
 app.use(express.static('public', options));
+app.use(express.static('node_modules/bulma/css'));
 
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);

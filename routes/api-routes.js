@@ -108,6 +108,4 @@ module.exports = function (app) {
 
   })
 
-
-
 };

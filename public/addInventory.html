@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="bulma.css" />
     <link rel="stylesheet" href="/css/new.css" />
     <link rel="stylesheet" href="/css/style.css" />
-
-
     <title>Bamazon Management</title>
 </head>
 
@@ -53,11 +51,19 @@
         <form action="">
             <div class="container">
                 <div class="columns is-centered">
-                    <div class="column is-2">
+                    <div class="column is-one-quarter">
                         <div class="field">
-                            <label class="label" for="id">ID</label>
+                            <label class="label" for="product_name">Product</label>
                             <div class="control">
-                                <input name="id" type="number" min='1' class="input" placeholder="ID">
+                                <input name="product_name" type="text" class="input" placeholder="Product">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="field">
+                            <label class="label" for="department_name">Department</label>
+                            <div class="control">
+                                <input name="department_name" type="text" class="input" placeholder="Department">
                             </div>
                         </div>
                     </div>
@@ -65,39 +71,34 @@
                         <div class="field">
                             <label class="label" for="price">Price</label>
                             <div class="control">
-                                <input name="price" type="number" step="any" min="0.5" class="input"
+                                <input name="price" type="number" step="any" min="0.1" class="input"
                                     placeholder="Price">
                             </div>
                         </div>
                     </div>
                     <div class="column is-2">
                         <div class="field">
-                            <label for="stock_quantity" class="label">Quantity</label>
+                            <label class="label" for="stock_quantity">Quantity</label>
                             <div class="control">
-                                <input name="stock_quantity" type="number" min="1" class="input" placeholder="Quantity">
+                                <input name="stock_quantity" type="number" min='1' class="input" placeholder="Quantity">
                             </div>
                         </div>
                     </div>
                     <div class="column is-narrow">
                         <div class="field">
-                            <label for="updateData" class="label">&nbsp;</label>
+                            <label class="label" for="">&nbsp;</label>
                             <div class="control">
-                                <button name="updateData" type="submit" class="button is-primary">Update</button>
+                                <button name="addItems" class="input button is-primary">Add Product</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </form>
 
-        <div id="productContent" class="container content">
-
-
-        </div>
-
     </div>
-
-    <script type="module" src="/js/management.js"></script>
+    <script src="js/addProducts.js"></script>
 </body>
 
 </html>

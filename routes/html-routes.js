@@ -5,8 +5,10 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
-    app.get('/css/bulma.css', function (req, res) {
-        res.sendFile(path.join(__dirname, '../../node_modules/bulma/css/bulma.css'))
-    })
+
+
+    /* app.get('/css/bulma.css', function (req, res) {
+        res.sendFile(path.join(__dirname, '../node_modules/bulma/css/bulma.css')) 
+})*/
 
 };

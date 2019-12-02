@@ -63,7 +63,7 @@ form .container {
 .box {
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: rgba(255, 255, 255, 0.125);
-  padding-bottom: 1em;
+  padding-bottom: 1em !important;
 }
 
 .modal-content {
@@ -89,6 +89,7 @@ form .container {
   padding-top: 3em;
   padding-bottom: 3em;
 }
+
 .container404 .is-primary {
   background-color: white;
   color: grey;
@@ -141,6 +142,24 @@ form .container {
   background: none;
 }
 
+#manageLink {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  font-size: 0.7em;
+}
+#manageLink a {
+  color: white;
+}
+
+#manageLink:hover {
+  color: #008f99;
+}
+
+#manageLink a:visited {
+  color: white;
+}
+
 @media only screen and (max-width: 769px) {
   .column {
     padding-top: 0.125rem;
@@ -158,6 +177,10 @@ form .container {
   body {
     padding-left: 0.8em;
     padding-right: 0.8em;
+  }
+
+  .container404 .column {
+    padding-left: 0.75rem;
   }
 
   @media only screen and (max-width: 600px) {

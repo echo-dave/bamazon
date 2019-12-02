@@ -62,4 +62,16 @@ module.exports = function (app) {
 
 
     })
+
+    //add new products
+    app.post('/api/inventory/newproduct', function (req, res) {
+        console.log(req.body);
+        db.Product.create(
+            req.body
+        );
+
+        res.end();
+
+    })
+
 }
