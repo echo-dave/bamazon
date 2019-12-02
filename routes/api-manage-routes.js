@@ -68,9 +68,23 @@ module.exports = function (app) {
         console.log(req.body);
         db.Product.create(
             req.body
-        );
+        ).then(function (product) {
+            console.log(product);
+            //Product.dataValues
 
-        res.end();
+            db.Product.findAll({
+                attributes: ['id', ['product_name', 'Name'], ['department_name', 'Department'], ['price', 'Price'], ['stock_quantity', 'Quantity']],
+                where: {
+                    id: product.dataValues.id
+                }
+            }).then(function (product) {
+                console.log(product);
+
+                res.json(product);
+
+            })
+
+        });
 
     })
 

@@ -29,19 +29,21 @@
 
             <div id="BamazonMenu" class="navbar-menu">
                 <div class="navbar-end">
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item  is-hoverable">
                         <a href="/management" class="navbar-link">
                             Products
                         </a>
-                        <div class="navbar-dropdown">
-                            <a href="/management?inventory=5" class="navbar-item">
-                                Low Inventory
-                            </a>
-                        </div>
+
+
+                        <a href="/management?inventory=5" class="navbar-item">
+                            Low Inventory
+                        </a>
+                        <a href="/addInventory" class="navbar-item">
+                            Add Inventory
+                        </a>
+
                     </div>
-                    <a class="navbar-item">
-                        Mangement
-                    </a>
+
 
                 </div>
 
@@ -97,8 +99,12 @@
 
         </form>
 
+        <div id="productContent" class="container content">
+
+
+        </div>
     </div>
-    <script src="js/addProducts.js"></script>
+    <script type="module" src="js/addProducts.js"></script>
 </body>
 
 </html>

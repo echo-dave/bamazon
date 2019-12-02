@@ -1,9 +1,12 @@
 
+//build output from array of objects
 function managementBuildProducts(products) {
     console.log('empty buld');
     //clear containers before rebuilding
-    $('.content + #products').remove();
-    $('.content').empty();
+    if (window.location.search.indexOf('addInventory') == -1) {
+        $('.content + #products').remove();
+        $('.content').empty();
+    }
 
     $('.content').append(`<div id="prodHeader" class="columns is-centered product_head"></div>`)
     for (let i = 0; i < Object.entries(products[0]).length; i++) {
