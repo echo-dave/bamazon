@@ -10,7 +10,8 @@ module.exports = function (app) {
         "product_name",
         "department_name",
         "price"
-      ]
+      ],
+      order: [['department_name', 'ASC'], ['product_name', 'ASC']]
     }).then(function (data) {
       res.json(data);
     });
@@ -91,7 +92,8 @@ module.exports = function (app) {
     db.Product.findAll({
       where: {
         department_name: req.params.category
-      }
+      },
+      order: [['product_name', 'ASC']]
     }).then(function (data) {
       res.json(data);
     })
